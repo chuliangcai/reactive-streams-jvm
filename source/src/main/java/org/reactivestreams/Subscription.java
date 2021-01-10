@@ -11,6 +11,7 @@ package org.reactivestreams;
  * <p>
  * It is used to both signal desire for data and cancel demand (and allow resource cleanup).
  */
+// TODO: 2021/1/10 代表一个订阅者订阅发布者的整个生命周期
 public interface Subscription {
 
     /**
@@ -26,6 +27,7 @@ public interface Subscription {
      * 
      * @param n the strictly positive number of elements to requests to the upstream {@link Publisher}
      */
+    // TODO: 2021/1/10 请求publisher发布事件 
     public void request(long n);
 
     /**
@@ -33,5 +35,6 @@ public interface Subscription {
      * <p>
      * Data may still be sent to meet previously signalled demand after calling cancel.
      */
+    // TODO: 2021/1/10 请求publisher停止发布事件，并清除资源
     public void cancel();
 }

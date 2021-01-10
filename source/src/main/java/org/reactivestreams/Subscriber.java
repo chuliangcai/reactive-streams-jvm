@@ -32,6 +32,7 @@ public interface Subscriber<T> {
      * 
      * @param s the {@link Subscription} that allows requesting data via {@link Subscription#request(long)}
      */
+    // TODO: 2021/1/10 订阅通知
     public void onSubscribe(Subscription s);
 
     /**
@@ -39,6 +40,7 @@ public interface Subscriber<T> {
      * 
      * @param t the element signaled
      */
+    // TODO: 2021/1/10 发布通知
     public void onNext(T t);
 
     /**
@@ -48,6 +50,7 @@ public interface Subscriber<T> {
      *
      * @param t the throwable signaled
      */
+    // TODO: 2021/1/10 出错通知
     public void onError(Throwable t);
 
     /**
@@ -55,5 +58,6 @@ public interface Subscriber<T> {
      * <p>
      * No further events will be sent even if {@link Subscription#request(long)} is invoked again.
      */
+    // TODO: 2021/1/10 完成通知
     public void onComplete();
 }

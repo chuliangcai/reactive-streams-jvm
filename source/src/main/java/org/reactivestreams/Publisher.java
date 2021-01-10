@@ -13,6 +13,7 @@ package org.reactivestreams;
  *
  * @param <T> the type of element signaled
  */
+// TODO: 2021/1/10 发布者
 public interface Publisher<T> {
 
     /**
@@ -29,5 +30,6 @@ public interface Publisher<T> {
      *
      * @param s the {@link Subscriber} that will consume signals from this {@link Publisher}
      */
+    // TODO: 2021/1/10 开始订阅，可以被调用多次
     public void subscribe(Subscriber<? super T> s);
 }
