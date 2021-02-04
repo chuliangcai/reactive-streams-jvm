@@ -28,6 +28,7 @@ public interface Subscription {
      * @param n the strictly positive number of elements to requests to the upstream {@link Publisher}
      */
     // TODO: 2021/1/10 请求publisher发布事件
+    // TODO: 2021/2/2 n表示向上游请求的元素个数
     public void request(long n);
 
     /**
